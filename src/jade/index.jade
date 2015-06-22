@@ -14,11 +14,25 @@ html(ng-app='mainApp')
 		link(rel='stylesheet', href='inc/main.css')
 		script(src='inc/angular.js')
 	body(ng-cloak, ng-controller='MainCtrl')
-		.container
+		.container(ng-class='gameStatus')
 			header.hide
 				h1 Splendid Gems
 			.jumbotron
 				h2.text-center Welcome to Splendid Gems!
+				h4 Active Player: {{currentPlayer.name}}
+			.pre-game
+				input(ng-model='ff.newPlayerName')
+				button.btn.btn-info(ng-click='addNewPlayer()') Add New Player
+				h4 Active Player: {{currentPlayer.name}}
+				ul
+					li(ng-repeat='player in allPlayers')
+						h5(ng-click='changeCurrentPlayer(player)') Name: {{player.name}}
+				button.btn.btn-success(ng-click='startGame()') Start Game
+			.game-started
+				h4 All Players
+				ul
+					li(ng-repeat='player in allPlayers')
+						h5(ng-click='changeCurrentPlayer(player)') Name: {{player.name}}
 		script(src='inc/lib.js')
 		script(src='inc/main.js')
 //		| @@javascriptReplaceFiles
