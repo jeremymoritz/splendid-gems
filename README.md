@@ -9,9 +9,12 @@ open dist/index.html
 
 
 ### File Structure
+* dist - used for compiling src code
 * grunt
 	* task - each grunt task has it's own folder
 		* task.js
+* lib - used for storing main external libraries before concatenation
+* node_modules - used for npm installed dependencies
 * src
 	* external - extra libraries and such
 	* fonts - custom fonts
