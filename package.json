@@ -1,15 +1,15 @@
 {
-  "name": "new-angular",
+  "name": "splendid-gems",
   "version": "0.0.1",
-  "description": "Initualize a new Angular app",
+  "description": "Some have suggested that this game is similar to the card game 'Splendor' by Space Cowboys.",
   "homepage": "http://moritzcompany.com",
   "author": "Moritz Company",
   "repository": {
     "type": "git",
-    "url": "https://github.com/davidmoritz/init-angular.git"
+    "url": "https://github.com/jeremymoritz/splendid-gems.git"
   },
   "bugs": {
-    "url": "https://github.com/davidmoritz/init-angular/issues"
+    "url": "https://github.com/jeremymoritz/splendid-gems/issues"
   },
   "scripts": {
     "install": "bower install"
