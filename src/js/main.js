@@ -4,12 +4,12 @@ mainApp.controller('MainCtrl', [
 	'$interval',
 	'GemFactory',
 	'MethodFactory',
-	function MainCtrl($s, $timeout, $interval, GF, MF) {
+	'FirebaseFactory',
+	function MainCtrl($s, $timeout, $interval, GF, MF, FF) {
 		'use strict';
 
 		function init() {
 			//	init stuff
-
 			// remove scrolling also removes click and drag
 			window.addEventListener('touchmove', function disallowScrolling(event) {
 				if ($(document).width() >= 768) {
@@ -64,6 +64,8 @@ mainApp.controller('MainCtrl', [
 			},
 			currentSelection: []
 		});
+
+		$s.fbLogin = FF.facebookLogin;
 
 		$s.addNewPlayer = function addNewPlayer() {
 			$s.currentPlayer = new Player($s.ff.newPlayerName);
@@ -131,5 +133,14 @@ mainApp.controller('MainCtrl', [
 
 			return true;
 		};
+
+		$s.activeGames = FF.getFBArray('activeGames');
+		$s.activeGames.$loaded(function afterActiveGamesLoaded() {
+			console.log('Firebase is working');
+			$('.notices').text('Firebase is working!');
+			$('body').addClass('facebook-available');
+		});
+
+		init();
 	}
 ]);

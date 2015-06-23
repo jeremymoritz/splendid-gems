@@ -20,9 +20,12 @@ html(ng-app='mainApp')
 			.jumbotron
 				h2.text-center Welcome to Splendid Gems!
 				h4 Active Player: {{currentPlayer.name}}
+				.notices
 			.pre-game
 				input(ng-model='ff.newPlayerName')
 				button.btn.btn-info(ng-click='addNewPlayer()') Add New Player
+				.clearfix
+				button.btn.btn-primary.facebook-login(ng-click='fbLogin()') Login with Facebook
 				h4 Active Player: {{currentPlayer.name}}
 				ul
 					li(ng-repeat='player in allPlayers')
