@@ -65,7 +65,9 @@ mainApp.controller('MainCtrl', [
 			currentSelection: []
 		});
 
-		$s.fbLogin = FF.facebookLogin;
+		$s.fbLogin = function facebookLogin() {
+			FF.facebookLogin();
+		};
 
 		$s.addNewPlayer = function addNewPlayer() {
 			$s.currentPlayer = new Player($s.ff.newPlayerName);
