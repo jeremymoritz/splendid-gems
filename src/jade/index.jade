@@ -33,13 +33,24 @@ html(ng-app='mainApp')
 				button.btn.btn-success(ng-click='startGame()') Start Game
 				button.btn.btn-warning(ng-click='quickStart()') Quick Start
 			.game-started.row
-				+col(6)
+				+col(null, 3, 4, 3)
 					h4 All Players
 					ul
 						li(ng-repeat='player in allPlayers')
-							h5(ng-click='changeCurrentPlayer(player)') Name: {{player.name}}
-							h6(ng-repeat='chip in player.chips') Gem: {{chip.gem}}
-				+col(6)
+							h5(ng-click='changeCurrentPlayer(player)') Name: {{player.name}} ({{player.chips.length}})
+							div(ng-if='player.chips.length')
+								h6(ng-repeat="(key, value) in player.chips | groupBy: 'gem'") Gem: {{key}} {{value.length > 1 ? "(" + value.length + ")" : ""}}
+				+col(null, 6, 4, 6)
+					ul.track(ng-repeat='track in activeCards')
+						li.card(ng-repeat='card in track' ng-class='card.gem')
+							h5.hidden Id: {{card.id}}
+							h4 Gem: {{card.gem}}
+							h5 Points: {{card.points}}
+							h5 Cost:
+							ul.cost
+								li(ng-repeat='(gem, value) in card.cost' ng-class='gem' ng-show='value > 0')
+									p {{value}}
+				+col(null, 3, 4, 3)
 					button(ng-repeat='gem in allGems' class='gem btn btn-{{gem.btnClass}}' ng-click='addChip(gem.name)' ng-disabled='!gemAvailable(gem.name)') {{gem.display}}
 					h4 Current Selection
 					ul

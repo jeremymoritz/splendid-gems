@@ -3,14 +3,16 @@ mainApp.controller('MainCtrl', [
 	'$timeout',
 	'$interval',
 	'GemFactory',
+	'CardFactory',
 	'MethodFactory',
 	'FirebaseFactory',
-	function MainCtrl($s, $timeout, $interval, GF, MF, FF) {
+	function MainCtrl($s, $timeout, $interval, GF, CF, MF, FF) {
 		'use strict';
 
 		function init() {
 			//	init stuff
 			// remove scrolling also removes click and drag
+			window.$s = $s;
 			window.addEventListener('touchmove', function disallowScrolling(event) {
 				if ($(document).width() >= 768) {
 					event.preventDefault();
@@ -50,6 +52,38 @@ mainApp.controller('MainCtrl', [
 			});
 		}
 
+		function User() {
+		}
+
+		function createNewUser() {
+			var currentTime = moment().format(timeFormat);
+
+			_.extend($s.currentUser, {
+				createdDate: currentTime,
+				name: $s.authData.facebook.displayName,
+				rating: 1200,
+				uid: $s.authData.uid,
+				gender: $s.authData.facebook.cachedUserProfile.gender,
+				firstName: $s.authData.facebook.cachedUserProfile.first_name,
+				lastName: $s.authData.facebook.cachedUserProfile.last_name,
+				picture: $s.authData.facebook.cachedUserProfile.picture.data.url,
+				timezone: $s.authData.facebook.cachedUserProfile.timezone
+			});
+		}
+
+		function shuffleCards() {
+			var cards = {};
+			cards.track1 = _.shuffle(_.where(CF.allCards, {track: 1}));
+			cards.track2 = _.shuffle(_.where(CF.allCards, {track: 2}));
+			cards.track3 = _.shuffle(_.where(CF.allCards, {track: 3}));
+
+			return cards;
+		}
+
+		function dealCard(track) {
+			$s.activeCards[track].push($s.allCards[track].splice(0, 1)[0]);
+		}
+
 		var timeFormat = 'YYYY-MM-DD HH:mm:ss';
 
 		//	initialize scoped variables
@@ -62,11 +96,22 @@ mainApp.controller('MainCtrl', [
 			ff: {
 				newPlayerName: ''
 			},
-			currentSelection: []
+			currentSelection: [],
+			allCards: shuffleCards(),
+			activeCards: {
+				track1: [],
+				track2: [],
+				track3: []
+			}
 		});
 
 		$s.fbLogin = function facebookLogin() {
-			FF.facebookLogin();
+			$s.authData = FF.facebookLogin();
+			$s.currentUser = FF.getFBObject('users/' + authData.uId);
+
+			if (!$s.currentUser.uid) {
+				createNewUser();
+			}
 		};
 
 		$s.addNewPlayer = function addNewPlayer() {
@@ -80,6 +125,11 @@ mainApp.controller('MainCtrl', [
 		};
 
 		$s.startGame = function startGame() {
+			for (var i = 1; i <= 3; i++) {
+				for (var j = 1; j <= 4; j++) {
+					dealCard('track' + i);
+				}
+			}
 			$s.gameStatus = 'game-started';
 		};
 
@@ -136,12 +186,12 @@ mainApp.controller('MainCtrl', [
 			return true;
 		};
 
-		$s.activeGames = FF.getFBArray('activeGames');
-		$s.activeGames.$loaded(function afterActiveGamesLoaded() {
-			console.log('Firebase is working');
-			$('.notices').text('Firebase is working!');
-			$('body').addClass('facebook-available');
-		});
+		// $s.activeGames = FF.getFBArray('activeGames');
+		// $s.activeGames.$loaded(function afterActiveGamesLoaded() {
+		// 	console.log('Firebase is working');
+		// 	$('.notices').text('Firebase is working!');
+		// 	$('body').addClass('facebook-available');
+		// });
 
 		init();
 	}

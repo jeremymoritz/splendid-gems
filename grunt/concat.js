@@ -16,6 +16,7 @@ module.exports = function exportConcat(grunt) {
 					'lib/lodash/lodash.min.js',
 					'lib/firebase/firebase.js',
 					'lib/angularfire/dist/angularfire.min.js',
+					'lib/angular-filter/dist/angular-filter.min.js',
 					'lib/moment/min/moment.min.js',
 					'lib/touch-punch/jquery.ui.touch-punch.min.js',
 					'src/external/**/*.js'

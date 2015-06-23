@@ -23,6 +23,10 @@ mainApp.factory('FirebaseFactory', [
 				return $fbObject(this.getFB(childPath));
 			},
 
+			getAuth: function getFBAuth(childPath) {
+				return $firebaseAuth(this.getFB(childPath));
+			},
+
 			setFB: function setFB(childPath, value) {
 				var ref = this.getFB(childPath);
 				ref.set(value);
@@ -39,6 +43,8 @@ mainApp.factory('FirebaseFactory', [
 						console.log('Authenticated successfully with payload:', authData);
 					}
 				}, {scope: 'user_friends'});
+
+				return authData;
 			}
 		};
 	}
