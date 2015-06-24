@@ -27,18 +27,17 @@ mainApp.controller('MainCtrl', [
 			});
 		}
 
-		function Card(gem, cost, points) {
-			_.extend(this, {
-				name: gem,
-				gem: gem,
-				cost: cost,
-				points: points || 0
+		function Card(options) {
+			_.extend(this, options, {
+				name: options.gem,
+				points: options.points || 0,
+				cost: _.extend(_.clone(costObject), options.cost)
 			});
 		}
 
-		function Goal(cost) {
-			_.extend(this, {
-				cost: cost
+		function Tile(options) {
+			_.extend(this, options, {
+				cost: _.extend(_.clone(costObject), options.cost)
 			});
 		}
 
@@ -47,7 +46,7 @@ mainApp.controller('MainCtrl', [
 				name: name,
 				chips: [],
 				cards: [],
-				goals: [],
+				tiles: [],
 				index: $s.allPlayers.length
 			});
 		}
@@ -72,10 +71,14 @@ mainApp.controller('MainCtrl', [
 		}
 
 		function shuffleCards() {
+			var cardValues = [];
 			var cards = {};
-			cards.track1 = _.shuffle(_.where(CF.allCards, {track: 1}));
-			cards.track2 = _.shuffle(_.where(CF.allCards, {track: 2}));
-			cards.track3 = _.shuffle(_.where(CF.allCards, {track: 3}));
+			_.each(CF.allCards, function eachCard(card) {
+				cardValues.push(new Card(card));
+			});
+			cards.track1 = _.shuffle(_.where(cardValues, {track: 1}));
+			cards.track2 = _.shuffle(_.where(cardValues, {track: 2}));
+			cards.track3 = _.shuffle(_.where(cardValues, {track: 3}));
 
 			return cards;
 		}
@@ -84,7 +87,27 @@ mainApp.controller('MainCtrl', [
 			$s.activeCards[track].push($s.allCards[track].splice(0, 1)[0]);
 		}
 
+		function shuffleTiles() {
+			var tiles = [];
+			_.each(CF.allTiles, function eachTile(tile) {
+				tiles.push(new Tile(tile));
+			});
+
+			return _.shuffle(tiles);
+		}
+
+		function dealTile() {
+			$s.activeTiles.push($s.allTiles.splice(0, 1)[0]);
+		}
+
 		var timeFormat = 'YYYY-MM-DD HH:mm:ss';
+		var costObject = {
+			white: 0,
+			blue: 0,
+			green: 0,
+			red: 0,
+			brown: 0
+		};
 
 		//	initialize scoped variables
 		_.assign($s, {
@@ -98,12 +121,24 @@ mainApp.controller('MainCtrl', [
 			},
 			currentSelection: [],
 			allCards: shuffleCards(),
+			allTiles: shuffleTiles(),
+			activeTiles: [],
 			activeCards: {
 				track1: [],
 				track2: [],
 				track3: []
 			}
 		});
+
+		$s.calculatePoints = function calculatePoints(player) {
+			var total = _.reduce(player.cards, function sumCards(total, card) {
+				return total + card.points;
+			}, 0);
+
+			return _.reduce(player.tiles, function sumTiles(total, tile) {
+				return total + tile.points;
+			}, total);
+		};
 
 		$s.fbLogin = function facebookLogin() {
 			$s.authData = FF.facebookLogin();
@@ -121,7 +156,12 @@ mainApp.controller('MainCtrl', [
 		};
 
 		$s.changeCurrentPlayer = function changeCurrentPlayer(player) {
-			$s.currentPlayer = player;
+			var index = $s.currentPlayer.index + 1;
+
+			if (index === $s.allPlayers.length) {
+				index = 0;
+			}
+			$s.currentPlayer = player || _.find($s.allPlayers, {index: index});
 		};
 
 		$s.startGame = function startGame() {
@@ -129,6 +169,10 @@ mainApp.controller('MainCtrl', [
 				for (var j = 1; j <= 4; j++) {
 					dealCard('track' + i);
 				}
+			}
+
+			for (var k = 0; k <= $s.allPlayers.length; k++) {
+				dealTile();
 			}
 			$s.gameStatus = 'game-started';
 		};
@@ -143,16 +187,24 @@ mainApp.controller('MainCtrl', [
 			$s.startGame();
 		};
 
+		$s.collectCard = function collectCard(card) {
+			var track = 'track' + card.track;
+			$s.currentPlayer.cards.push(card);
+			$s.activeCards[track] = _.reject($s.activeCards[track], card);
+			dealCard(track);
+			$s.changeCurrentPlayer();
+		};
+
+		$s.collectTile = function collectTile(tile) {
+			$s.currentPlayer.tiles.push(tile);
+			$s.activeTiles = _.reject($s.activeTiles, Tile);
+		};
+
 		$s.collectChips = function collectChips() {
-			var index = $s.currentPlayer.index + 1;
 			_.each($s.currentSelection, function eachChip(gem) {
 				$s.currentPlayer.chips.push(new Chip(gem));
 			});
-
-			if (index === $s.allPlayers.length) {
-				index = 0;
-			}
-			$s.currentPlayer = _.find($s.allPlayers, {index: index});
+			$s.changeCurrentPlayer();
 			$s.currentSelection = [];
 		};
 

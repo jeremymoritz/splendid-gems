@@ -37,12 +37,14 @@ html(ng-app='mainApp')
 					h4 All Players
 					ul
 						li(ng-repeat='player in allPlayers')
-							h5(ng-click='changeCurrentPlayer(player)') Name: {{player.name}} ({{player.chips.length}})
+							h5(ng-click='changeCurrentPlayer(player)') {{player.name}} chips:({{player.chips.length}}) points:({{calculatePoints(player)}})
+							div(ng-if='player.cards.length')
+								h6(ng-repeat="(key, value) in player.cards | groupBy: 'gem'") Card: {{key}} {{value.length > 1 ? "(" + value.length + ")" : ""}}
 							div(ng-if='player.chips.length')
 								h6(ng-repeat="(key, value) in player.chips | groupBy: 'gem'") Gem: {{key}} {{value.length > 1 ? "(" + value.length + ")" : ""}}
 				+col(null, 6, 4, 6)
 					ul.track(ng-repeat='track in activeCards')
-						li.card(ng-repeat='card in track' ng-class='card.gem')
+						li.card(ng-repeat='card in track' ng-class='card.gem' ng-click='collectCard(card)')
 							h5.hidden Id: {{card.id}}
 							h4 Gem: {{card.gem}}
 							h5 Points: {{card.points}}
@@ -50,6 +52,14 @@ html(ng-app='mainApp')
 							ul.cost
 								li(ng-repeat='(gem, value) in card.cost' ng-class='gem' ng-show='value > 0')
 									p {{value}}
+					ul.track.tile-row
+						li.tile.card(ng-repeat='tile in activeTiles' ng-click='collectTile(tile)')
+							h5 Points: {{tile.points}}
+							h5 Cost:
+							ul.cost
+								li(ng-repeat='(gem, value) in tile.cost' ng-class='gem' ng-show='value > 0')
+									p {{value}}
+
 				+col(null, 3, 4, 3)
 					button(ng-repeat='gem in allGems' class='gem btn btn-{{gem.btnClass}}' ng-click='addChip(gem.name)' ng-disabled='!gemAvailable(gem.name)') {{gem.display}}
 					h4 Current Selection
