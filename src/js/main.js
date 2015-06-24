@@ -11,8 +11,8 @@ mainApp.controller('MainCtrl', [
 
 		function init() {
 			//	init stuff
-			// remove scrolling also removes click and drag
 			window.$s = $s;
+			// remove scrolling also removes click and drag
 			window.addEventListener('touchmove', function disallowScrolling(event) {
 				if ($(document).width() >= 768) {
 					event.preventDefault();
@@ -102,11 +102,11 @@ mainApp.controller('MainCtrl', [
 
 		var timeFormat = 'YYYY-MM-DD HH:mm:ss';
 		var costObject = {
-			white: 0,
-			blue: 0,
-			green: 0,
-			red: 0,
-			brown: 0
+			diamond: 0,
+			sapphire: 0,
+			emerald: 0,
+			ruby: 0,
+			onyx: 0
 		};
 
 		//	initialize scoped variables

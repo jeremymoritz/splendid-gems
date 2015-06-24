@@ -4,80 +4,80 @@ mainApp.factory('CardFactory', [
 
 		return {
 			allCards: [{
-				id: 'B11',
+				id: 'S11',
 				track: 1,
 				gem: 'sapphire',
 				cost: {
-					red: 4
+					ruby: 4
 				},
 				points: 1
 			}, {
-				id: 'B12',
+				id: 'S12',
 				track: 1,
 				gem: 'sapphire',
 				cost: {
-					blue: 1,
-					green: 3,
-					red: 1
+					sapphire: 1,
+					emerald: 3,
+					ruby: 1
 				}
 			}, {
-				id: 'B13',
+				id: 'S13',
 				track: 1,
 				gem: 'sapphire',
 				cost: {
-					brown: 3
+					onyx: 3
 				}
 			}, {
-				id: 'B14',
+				id: 'S14',
 				track: 1,
 				gem: 'sapphire',
 				cost: {
-					white: 1,
-					green: 2,
-					red: 2
+					diamond: 1,
+					emerald: 2,
+					ruby: 2
 				}
 			}, {
-				id: 'B15',
+				id: 'S15',
 				track: 1,
 				gem: 'sapphire',
 				cost: {
-					green: 2,
-					brown: 2
+					emerald: 2,
+					onyx: 2
 				}
 			}, {
-				id: 'B16',
+				id: 'S16',
 				track: 1,
 				gem: 'sapphire',
 				cost: {
-					white: 1,
-					green: 1,
-					red: 2,
-					brown: 1
+					diamond: 1,
+					emerald: 1,
+					ruby: 2,
+					onyx: 1
 				}
 			}, {
-				id: 'B17',
+				id: 'S17',
 				track: 1,
 				gem: 'sapphire',
 				cost: {
-					white: 1,
-					brown: 2
+					diamond: 1,
+					onyx: 2
 				}
 			}, {
-				id: 'B18',
+				id: 'S18',
 				track: 1,
 				gem: 'sapphire',
 				cost: {
-					white: 1,
-					green: 1,
-					red: 1,
-					brown: 1
+					diamond: 1,
+					emerald: 1,
+					ruby: 1,
+					onyx: 1
 				}
 			}, {
 				id: 'O11',
 				track: 1,
 				gem: 'topaz',
 				cost: {
-					blue: 4
+					sapphire: 4
 				},
 				points: 1
 			}, {
@@ -85,137 +85,137 @@ mainApp.factory('CardFactory', [
 				track: 1,
 				gem: 'topaz',
 				cost: {
-					green: 1,
-					red: 3,
-					brown: 1
+					emerald: 1,
+					ruby: 3,
+					onyx: 1
 				}
 			}, {
 				id: 'O13',
 				track: 1,
 				gem: 'topaz',
 				cost: {
-					green: 3
+					emerald: 3
 				}
 			}, {
 				id: 'O14',
 				track: 1,
 				gem: 'topaz',
 				cost: {
-					white: 2,
-					blue: 2,
-					red: 1
+					diamond: 2,
+					sapphire: 2,
+					ruby: 1
 				}
 			}, {
 				id: 'O15',
 				track: 1,
 				gem: 'topaz',
 				cost: {
-					white: 2,
-					green: 2
+					diamond: 2,
+					emerald: 2
 				}
 			}, {
 				id: 'O16',
 				track: 1,
 				gem: 'topaz',
 				cost: {
-					white: 1,
-					blue: 2,
-					green: 1,
-					red: 1
+					diamond: 1,
+					sapphire: 2,
+					emerald: 1,
+					ruby: 1
 				}
 			}, {
 				id: 'O17',
 				track: 1,
 				gem: 'topaz',
 				cost: {
-					green: 2,
-					red: 1
+					emerald: 2,
+					ruby: 1
 				}
 			}, {
 				id: 'O18',
 				track: 1,
 				gem: 'topaz',
 				cost: {
-					white: 1,
-					blue: 1,
-					green: 1,
-					red: 1
+					diamond: 1,
+					sapphire: 1,
+					emerald: 1,
+					ruby: 1
 				}
 			}, {
-				id: 'G11',
+				id: 'E11',
 				track: 1,
 				gem: 'emerald',
 				cost: {
-					brown: 4
+					onyx: 4
 				},
 				points: 1
 			}, {
-				id: 'G12',
+				id: 'E12',
 				track: 1,
 				gem: 'emerald',
 				cost: {
-					white: 1,
-					blue: 3,
-					green: 1
+					diamond: 1,
+					sapphire: 3,
+					emerald: 1
 				}
 			}, {
-				id: 'G13',
+				id: 'E13',
 				track: 1,
 				gem: 'emerald',
 				cost: {
-					red: 3
+					ruby: 3
 				}
 			}, {
-				id: 'G14',
+				id: 'E14',
 				track: 1,
 				gem: 'emerald',
 				cost: {
-					blue: 1,
-					red: 2,
-					brown: 2
+					sapphire: 1,
+					ruby: 2,
+					onyx: 2
 				}
 			}, {
-				id: 'G15',
+				id: 'E15',
 				track: 1,
 				gem: 'emerald',
 				cost: {
-					blue: 2,
-					red: 2
+					sapphire: 2,
+					ruby: 2
 				}
 			}, {
-				id: 'G16',
+				id: 'E16',
 				track: 1,
 				gem: 'emerald',
 				cost: {
-					white: 1,
-					blue: 1,
-					red: 1,
-					brown: 2
+					diamond: 1,
+					sapphire: 1,
+					ruby: 1,
+					onyx: 2
 				}
 			}, {
-				id: 'G17',
+				id: 'E17',
 				track: 1,
 				gem: 'emerald',
 				cost: {
-					white: 2,
-					blue: 1
+					diamond: 2,
+					sapphire: 1
 				}
 			}, {
-				id: 'G18',
+				id: 'E18',
 				track: 1,
 				gem: 'emerald',
 				cost: {
-					white: 1,
-					blue: 1,
-					red: 1,
-					brown: 1
+					diamond: 1,
+					sapphire: 1,
+					ruby: 1,
+					onyx: 1
 				}
 			}, {
 				id: 'R11',
 				track: 1,
 				gem: 'ruby',
 				cost: {
-					white: 4
+					diamond: 4
 				},
 				points: 1
 			}, {
@@ -223,184 +223,184 @@ mainApp.factory('CardFactory', [
 				track: 1,
 				gem: 'ruby',
 				cost: {
-					white: 1,
-					red: 1,
-					brown: 3
+					diamond: 1,
+					ruby: 1,
+					onyx: 3
 				}
 			}, {
 				id: 'R13',
 				track: 1,
 				gem: 'ruby',
 				cost: {
-					white: 3
+					diamond: 3
 				}
 			}, {
 				id: 'R14',
 				track: 1,
 				gem: 'ruby',
 				cost: {
-					white: 2,
-					green: 1,
-					brown: 2
+					diamond: 2,
+					emerald: 1,
+					onyx: 2
 				}
 			}, {
 				id: 'R15',
 				track: 1,
 				gem: 'ruby',
 				cost: {
-					white: 2,
-					red: 2
+					diamond: 2,
+					ruby: 2
 				}
 			}, {
 				id: 'R16',
 				track: 1,
 				gem: 'ruby',
 				cost: {
-					white: 2,
-					blue: 1,
-					green: 1,
-					brown: 1
+					diamond: 2,
+					sapphire: 1,
+					emerald: 1,
+					onyx: 1
 				}
 			}, {
 				id: 'R17',
 				track: 1,
 				gem: 'ruby',
 				cost: {
-					blue: 2,
-					green: 1
+					sapphire: 2,
+					emerald: 1
 				}
 			}, {
 				id: 'R18',
 				track: 1,
 				gem: 'ruby',
 				cost: {
-					white: 1,
-					blue: 1,
-					green: 1,
-					brown: 1
+					diamond: 1,
+					sapphire: 1,
+					emerald: 1,
+					onyx: 1
 				}
 			}, {
-				id: 'W11',
+				id: 'D11',
 				track: 1,
 				gem: 'diamond',
 				cost: {
-					green: 4
+					emerald: 4
 				},
 				points: 1
 			}, {
-				id: 'W12',
+				id: 'D12',
 				track: 1,
 				gem: 'diamond',
 				cost: {
-					white: 3,
-					blue: 1,
-					brown: 1
+					diamond: 3,
+					sapphire: 1,
+					onyx: 1
 				}
 			}, {
-				id: 'W13',
+				id: 'D13',
 				track: 1,
 				gem: 'diamond',
 				cost: {
-					blue: 3
+					sapphire: 3
 				}
 			}, {
-				id: 'W14',
+				id: 'D14',
 				track: 1,
 				gem: 'diamond',
 				cost: {
-					blue: 2,
-					green: 2,
-					brown: 1
+					sapphire: 2,
+					emerald: 2,
+					onyx: 1
 				}
 			}, {
-				id: 'W15',
+				id: 'D15',
 				track: 1,
 				gem: 'diamond',
 				cost: {
-					blue: 2,
-					brown: 2
+					sapphire: 2,
+					onyx: 2
 				}
 			}, {
-				id: 'W16',
+				id: 'D16',
 				track: 1,
 				gem: 'diamond',
 				cost: {
-					blue: 1,
-					green: 2,
-					red: 1,
-					brown: 1
+					sapphire: 1,
+					emerald: 2,
+					ruby: 1,
+					onyx: 1
 				}
 			}, {
-				id: 'W17',
+				id: 'D17',
 				track: 1,
 				gem: 'diamond',
 				cost: {
-					red: 2,
-					brown: 1
+					ruby: 2,
+					onyx: 1
 				}
 			}, {
-				id: 'W18',
+				id: 'D18',
 				track: 1,
 				gem: 'diamond',
 				cost: {
-					blue: 1,
-					green: 1,
-					red: 1,
-					brown: 1
+					sapphire: 1,
+					emerald: 1,
+					ruby: 1,
+					onyx: 1
 				}
 			}, {
-				id: 'B21',
+				id: 'S21',
 				track: 2,
 				gem: 'sapphire',
 				cost: {
-					blue: 6
+					sapphire: 6
 				},
 				points: 3
 			}, {
-				id: 'B22',
+				id: 'S22',
 				track: 2,
 				gem: 'sapphire',
 				cost: {
-					white: 5,
-					blue: 3
+					diamond: 5,
+					sapphire: 3
 				},
 				points: 2
 			}, {
-				id: 'B23',
+				id: 'S23',
 				track: 2,
 				gem: 'sapphire',
 				cost: {
-					blue: 5
+					sapphire: 5
 				},
 				points: 2
 			}, {
-				id: 'B24',
+				id: 'S24',
 				track: 2,
 				gem: 'sapphire',
 				cost: {
-					white: 2,
-					red: 1,
-					brown: 4
+					diamond: 2,
+					ruby: 1,
+					onyx: 4
 				},
 				points: 2
 			}, {
-				id: 'B25',
+				id: 'S25',
 				track: 2,
 				gem: 'sapphire',
 				cost: {
-					blue: 2,
-					green: 3,
-					brown: 3
+					sapphire: 2,
+					emerald: 3,
+					onyx: 3
 				},
 				points: 1
 			}, {
-				id: 'B26',
+				id: 'S26',
 				track: 2,
 				gem: 'sapphire',
 				cost: {
-					blue: 2,
-					green: 2,
-					red: 3
+					sapphire: 2,
+					emerald: 2,
+					ruby: 3
 				},
 				points: 1
 			}, {
@@ -408,7 +408,7 @@ mainApp.factory('CardFactory', [
 				track: 2,
 				gem: 'topaz',
 				cost: {
-					brown: 6
+					onyx: 6
 				},
 				points: 3
 			}, {
@@ -416,8 +416,8 @@ mainApp.factory('CardFactory', [
 				track: 2,
 				gem: 'topaz',
 				cost: {
-					green: 5,
-					red: 3
+					emerald: 5,
+					ruby: 3
 				},
 				points: 2
 			}, {
@@ -425,7 +425,7 @@ mainApp.factory('CardFactory', [
 				track: 2,
 				gem: 'topaz',
 				cost: {
-					white: 5
+					diamond: 5
 				},
 				points: 2
 			}, {
@@ -433,9 +433,9 @@ mainApp.factory('CardFactory', [
 				track: 2,
 				gem: 'topaz',
 				cost: {
-					blue: 1,
-					green: 4,
-					red: 2
+					sapphire: 1,
+					emerald: 4,
+					ruby: 2
 				},
 				points: 2
 			}, {
@@ -443,9 +443,9 @@ mainApp.factory('CardFactory', [
 				track: 2,
 				gem: 'topaz',
 				cost: {
-					white: 3,
-					green: 3,
-					brown: 2
+					diamond: 3,
+					emerald: 3,
+					onyx: 2
 				},
 				points: 1
 			}, {
@@ -453,64 +453,64 @@ mainApp.factory('CardFactory', [
 				track: 2,
 				gem: 'topaz',
 				cost: {
-					white: 3,
-					blue: 2,
-					green: 2
+					diamond: 3,
+					sapphire: 2,
+					emerald: 2
 				},
 				points: 1
 			}, {
-				id: 'G21',
+				id: 'E21',
 				track: 2,
 				gem: 'emerald',
 				cost: {
-					green: 6
+					emerald: 6
 				},
 				points: 3
 			}, {
-				id: 'G22',
+				id: 'E22',
 				track: 2,
 				gem: 'emerald',
 				cost: {
-					blue: 5,
-					green: 3
+					sapphire: 5,
+					emerald: 3
 				},
 				points: 2
 			}, {
-				id: 'G23',
+				id: 'E23',
 				track: 2,
 				gem: 'emerald',
 				cost: {
-					green: 5
+					emerald: 5
 				},
 				points: 2
 			}, {
-				id: 'G24',
+				id: 'E24',
 				track: 2,
 				gem: 'emerald',
 				cost: {
-					white: 4,
-					blue: 2,
-					brown: 1
+					diamond: 4,
+					sapphire: 2,
+					onyx: 1
 				},
 				points: 2
 			}, {
-				id: 'G25',
+				id: 'E25',
 				track: 2,
 				gem: 'emerald',
 				cost: {
-					white: 3,
-					green: 2,
-					red: 3
+					diamond: 3,
+					emerald: 2,
+					ruby: 3
 				},
 				points: 1
 			}, {
-				id: 'G26',
+				id: 'E26',
 				track: 2,
 				gem: 'emerald',
 				cost: {
-					white: 2,
-					blue: 3,
-					brown: 2
+					diamond: 2,
+					sapphire: 3,
+					onyx: 2
 				},
 				points: 1
 			}, {
@@ -518,7 +518,7 @@ mainApp.factory('CardFactory', [
 				track: 2,
 				gem: 'ruby',
 				cost: {
-					red: 6
+					ruby: 6
 				},
 				points: 3
 			}, {
@@ -526,8 +526,8 @@ mainApp.factory('CardFactory', [
 				track: 2,
 				gem: 'ruby',
 				cost: {
-					white: 3,
-					brown: 5
+					diamond: 3,
+					onyx: 5
 				},
 				points: 2
 			}, {
@@ -535,7 +535,7 @@ mainApp.factory('CardFactory', [
 				track: 2,
 				gem: 'ruby',
 				cost: {
-					brown: 5
+					onyx: 5
 				},
 				points: 2
 			}, {
@@ -543,9 +543,9 @@ mainApp.factory('CardFactory', [
 				track: 2,
 				gem: 'ruby',
 				cost: {
-					white: 1,
-					blue: 4,
-					green: 2
+					diamond: 1,
+					sapphire: 4,
+					emerald: 2
 				},
 				points: 2
 			}, {
@@ -553,9 +553,9 @@ mainApp.factory('CardFactory', [
 				track: 2,
 				gem: 'ruby',
 				cost: {
-					blue: 3,
-					red: 2,
-					brown: 3
+					sapphire: 3,
+					ruby: 2,
+					onyx: 3
 				},
 				points: 1
 			}, {
@@ -563,102 +563,102 @@ mainApp.factory('CardFactory', [
 				track: 2,
 				gem: 'ruby',
 				cost: {
-					white: 2,
-					red: 2,
-					brown: 3
+					diamond: 2,
+					ruby: 2,
+					onyx: 3
 				},
 				points: 1
 			}, {
-				id: 'W21',
+				id: 'D21',
 				track: 2,
 				gem: 'diamond',
 				cost: {
-					white: 6
+					diamond: 6
 				},
 				points: 3
 			}, {
-				id: 'W22',
+				id: 'D22',
 				track: 2,
 				gem: 'diamond',
 				cost: {
-					red: 5,
-					brown: 3
+					ruby: 5,
+					onyx: 3
 				},
 				points: 2
 			}, {
-				id: 'W23',
+				id: 'D23',
 				track: 2,
 				gem: 'diamond',
 				cost: {
-					red: 5
+					ruby: 5
 				},
 				points: 2
 			}, {
-				id: 'W24',
+				id: 'D24',
 				track: 2,
 				gem: 'diamond',
 				cost: {
-					green: 1,
-					red: 4,
-					brown: 2
+					emerald: 1,
+					ruby: 4,
+					onyx: 2
 				},
 				points: 2
 			}, {
-				id: 'W25',
+				id: 'D25',
 				track: 2,
 				gem: 'diamond',
 				cost: {
-					white: 2,
-					blue: 3,
-					red: 3
+					diamond: 2,
+					sapphire: 3,
+					ruby: 3
 				},
 				points: 1
 			}, {
-				id: 'W26',
+				id: 'D26',
 				track: 2,
 				gem: 'diamond',
 				cost: {
-					green: 3,
-					red: 2,
-					brown: 2
+					emerald: 3,
+					ruby: 2,
+					onyx: 2
 				},
 				points: 1
 			}, {
-				id: 'B31',
+				id: 'S31',
 				track: 3,
 				gem: 'sapphire',
 				cost: {
-					white: 7,
-					blue: 3
+					diamond: 7,
+					sapphire: 3
 				},
 				points: 5
 			}, {
-				id: 'B32',
+				id: 'S32',
 				track: 3,
 				gem: 'sapphire',
 				cost: {
-					white: 7
+					diamond: 7
 				},
 				points: 4
 			}, {
-				id: 'B33',
+				id: 'S33',
 				track: 3,
 				gem: 'sapphire',
 				cost: {
-					white: 6,
-					blue: 3,
-					brown: 3
+					diamond: 6,
+					sapphire: 3,
+					onyx: 3
 				},
 				points: 4
 			}, {
-				id: 'B34',
+				id: 'S34',
 				track: 3,
 				gem: 'sapphire',
 				cost: {
-					white: 3,
-					green: 3,
-					red: 3,
-					brown: 5
+					diamond: 3,
+					emerald: 3,
+					ruby: 3,
+					onyx: 5
 				},
 				points: 3
 			}, {
@@ -666,8 +666,8 @@ mainApp.factory('CardFactory', [
 				track: 3,
 				gem: 'topaz',
 				cost: {
-					red: 7,
-					brown: 3
+					ruby: 7,
+					onyx: 3
 				},
 				points: 5
 			}, {
@@ -675,7 +675,7 @@ mainApp.factory('CardFactory', [
 				track: 3,
 				gem: 'topaz',
 				cost: {
-					red: 7
+					ruby: 7
 				},
 				points: 4
 			}, {
@@ -683,9 +683,9 @@ mainApp.factory('CardFactory', [
 				track: 3,
 				gem: 'topaz',
 				cost: {
-					green: 3,
-					red: 6,
-					brown: 3
+					emerald: 3,
+					ruby: 6,
+					onyx: 3
 				},
 				points: 4
 			}, {
@@ -693,48 +693,48 @@ mainApp.factory('CardFactory', [
 				track: 3,
 				gem: 'topaz',
 				cost: {
-					white: 3,
-					blue: 3,
-					green: 5,
-					red: 3
+					diamond: 3,
+					sapphire: 3,
+					emerald: 5,
+					ruby: 3
 				},
 				points: 3
 			}, {
-				id: 'G31',
+				id: 'E31',
 				track: 3,
 				gem: 'emerald',
 				cost: {
-					blue: 7,
-					green: 3
+					sapphire: 7,
+					emerald: 3
 				},
 				points: 5
 			}, {
-				id: 'G32',
+				id: 'E32',
 				track: 3,
 				gem: 'emerald',
 				cost: {
-					blue: 7
+					sapphire: 7
 				},
 				points: 4
 			}, {
-				id: 'G33',
+				id: 'E33',
 				track: 3,
 				gem: 'emerald',
 				cost: {
-					white: 3,
-					blue: 6,
-					green: 3
+					diamond: 3,
+					sapphire: 6,
+					emerald: 3
 				},
 				points: 4
 			}, {
-				id: 'G34',
+				id: 'E34',
 				track: 3,
 				gem: 'emerald',
 				cost: {
-					white: 5,
-					blue: 3,
-					red: 3,
-					brown: 3
+					diamond: 5,
+					sapphire: 3,
+					ruby: 3,
+					onyx: 3
 				},
 				points: 3
 			}, {
@@ -742,8 +742,8 @@ mainApp.factory('CardFactory', [
 				track: 3,
 				gem: 'ruby',
 				cost: {
-					green: 7,
-					red: 3
+					emerald: 7,
+					ruby: 3
 				},
 				points: 5
 			}, {
@@ -751,7 +751,7 @@ mainApp.factory('CardFactory', [
 				track: 3,
 				gem: 'ruby',
 				cost: {
-					green: 7
+					emerald: 7
 				},
 				points: 4
 			}, {
@@ -759,9 +759,9 @@ mainApp.factory('CardFactory', [
 				track: 3,
 				gem: 'ruby',
 				cost: {
-					blue: 3,
-					green: 6,
-					red: 3
+					sapphire: 3,
+					emerald: 6,
+					ruby: 3
 				},
 				points: 4
 			}, {
@@ -769,149 +769,149 @@ mainApp.factory('CardFactory', [
 				track: 3,
 				gem: 'ruby',
 				cost: {
-					white: 3,
-					blue: 5,
-					green: 3,
-					brown: 3
+					diamond: 3,
+					sapphire: 5,
+					emerald: 3,
+					onyx: 3
 				},
 				points: 3
 			}, {
-				id: 'W31',
+				id: 'D31',
 				track: 3,
 				gem: 'diamond',
 				cost: {
-					white: 3,
-					brown: 7
+					diamond: 3,
+					onyx: 7
 				},
 				points: 5
 			}, {
-				id: 'W32',
+				id: 'D32',
 				track: 3,
 				gem: 'diamond',
 				cost: {
-					brown: 7
+					onyx: 7
 				},
 				points: 4
 			}, {
-				id: 'W33',
+				id: 'D33',
 				track: 3,
 				gem: 'diamond',
 				cost: {
-					white: 3,
-					green: 3,
-					brown: 6
+					diamond: 3,
+					emerald: 3,
+					onyx: 6
 				},
 				points: 4
 			}, {
-				id: 'W34',
+				id: 'D34',
 				track: 3,
 				gem: 'diamond',
 				cost: {
-					blue: 3,
-					green: 3,
-					red: 5,
-					brown: 3
+					sapphire: 3,
+					emerald: 3,
+					ruby: 5,
+					onyx: 3
 				},
 				points: 3
 			}],
 			allTiles: [{
 				id: 'T1',
 				cost: {
-					white: 4,
-					blue: 4,
-					green: 0,
-					red: 0,
-					brown: 0
+					diamond: 4,
+					sapphire: 4,
+					emerald: 0,
+					ruby: 0,
+					onyx: 0
 				},
 				points: 3
 			}, {
 				id: 'T2',
 				cost: {
-					white: 0,
-					blue: 4,
-					green: 4,
-					red: 0,
-					brown: 0
+					diamond: 0,
+					sapphire: 4,
+					emerald: 4,
+					ruby: 0,
+					onyx: 0
 				},
 				points: 3
 			}, {
 				id: 'T3',
 				cost: {
-					white: 0,
-					blue: 0,
-					green: 4,
-					red: 4,
-					brown: 0
+					diamond: 0,
+					sapphire: 0,
+					emerald: 4,
+					ruby: 4,
+					onyx: 0
 				},
 				points: 3
 			}, {
 				id: 'T4',
 				cost: {
-					white: 0,
-					blue: 0,
-					green: 0,
-					red: 4,
-					brown: 4
+					diamond: 0,
+					sapphire: 0,
+					emerald: 0,
+					ruby: 4,
+					onyx: 4
 				},
 				points: 3
 			}, {
 				id: 'T5',
 				cost: {
-					white: 4,
-					blue: 0,
-					green: 0,
-					red: 0,
-					brown: 4
+					diamond: 4,
+					sapphire: 0,
+					emerald: 0,
+					ruby: 0,
+					onyx: 4
 				},
 				points: 3
 			}, {
 				id: 'T6',
 				cost: {
-					white: 3,
-					blue: 3,
-					green: 3,
-					red: 0,
-					brown: 0
+					diamond: 3,
+					sapphire: 3,
+					emerald: 3,
+					ruby: 0,
+					onyx: 0
 				},
 				points: 3
 			}, {
 				id: 'T7',
 				cost: {
-					white: 0,
-					blue: 3,
-					green: 3,
-					red: 3,
-					brown: 0
+					diamond: 0,
+					sapphire: 3,
+					emerald: 3,
+					ruby: 3,
+					onyx: 0
 				},
 				points: 3
 			}, {
 				id: 'T8',
 				cost: {
-					white: 0,
-					blue: 0,
-					green: 3,
-					red: 3,
-					brown: 3
+					diamond: 0,
+					sapphire: 0,
+					emerald: 3,
+					ruby: 3,
+					onyx: 3
 				},
 				points: 3
 			}, {
 				id: 'T9',
 				cost: {
-					white: 3,
-					blue: 0,
-					green: 0,
-					red: 3,
-					brown: 3
+					diamond: 3,
+					sapphire: 0,
+					emerald: 0,
+					ruby: 3,
+					onyx: 3
 				},
 				points: 3
 			}, {
 				id: 'T10',
 				cost: {
-					white: 3,
-					blue: 3,
-					green: 0,
-					red: 0,
-					brown: 3
+					diamond: 3,
+					sapphire: 3,
+					emerald: 0,
+					ruby: 0,
+					onyx: 3
 				},
 				points: 3
 			}]
