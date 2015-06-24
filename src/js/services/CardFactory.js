@@ -75,7 +75,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O11',
 				track: 1,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					sapphire: 4
 				},
@@ -83,7 +83,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O12',
 				track: 1,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					emerald: 1,
 					ruby: 3,
@@ -92,14 +92,14 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O13',
 				track: 1,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					emerald: 3
 				}
 			}, {
 				id: 'O14',
 				track: 1,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					diamond: 2,
 					sapphire: 2,
@@ -108,7 +108,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O15',
 				track: 1,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					diamond: 2,
 					emerald: 2
@@ -116,7 +116,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O16',
 				track: 1,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					diamond: 1,
 					sapphire: 2,
@@ -126,7 +126,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O17',
 				track: 1,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					emerald: 2,
 					ruby: 1
@@ -134,7 +134,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O18',
 				track: 1,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					diamond: 1,
 					sapphire: 1,
@@ -406,7 +406,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O21',
 				track: 2,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					onyx: 6
 				},
@@ -414,7 +414,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O22',
 				track: 2,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					emerald: 5,
 					ruby: 3
@@ -423,7 +423,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O23',
 				track: 2,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					diamond: 5
 				},
@@ -431,7 +431,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O24',
 				track: 2,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					sapphire: 1,
 					emerald: 4,
@@ -441,7 +441,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O25',
 				track: 2,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					diamond: 3,
 					emerald: 3,
@@ -451,7 +451,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O26',
 				track: 2,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					diamond: 3,
 					sapphire: 2,
@@ -664,7 +664,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O31',
 				track: 3,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					ruby: 7,
 					onyx: 3
@@ -673,7 +673,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O32',
 				track: 3,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					ruby: 7
 				},
@@ -681,7 +681,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O33',
 				track: 3,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					emerald: 3,
 					ruby: 6,
@@ -691,7 +691,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O34',
 				track: 3,
-				gem: 'topaz',
+				gem: 'onyx',
 				cost: {
 					diamond: 3,
 					sapphire: 3,

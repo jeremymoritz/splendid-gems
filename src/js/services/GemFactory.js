@@ -9,8 +9,8 @@ mainApp.factory('GemFactory', [
 				btnClass: 'success',
 				color: 'green'
 			}, {
-				name: 'topaz',
-				display: 'Topaz',
+				name: 'onyx',
+				display: 'Onyx',
 				btnClass: 'warning',
 				color: 'orange'
 			}, {
