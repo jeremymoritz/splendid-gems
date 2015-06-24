@@ -20,8 +20,10 @@ mainApp.controller('MainCtrl', [
 			}, false);
 		}
 
-		function Chip(gem) {
+		function Chip(gem, count) {
+			count = count || '';
 			_.extend(this, {
+				id: gem + count,
 				name: gem,
 				gem: gem
 			});
@@ -44,9 +46,11 @@ mainApp.controller('MainCtrl', [
 		function Player(name) {
 			_.extend(this, {
 				name: name,
+				auto: true,
 				chips: [],
 				cards: [],
 				tiles: [],
+				reserve: [],
 				index: $s.allPlayers.length
 			});
 		}
@@ -87,6 +91,12 @@ mainApp.controller('MainCtrl', [
 			$s.activeCards[track].push($s.allCards[track].splice(0, 1)[0]);
 		}
 
+		function replaceCard(card) {
+			var track = 'track' + card.track;
+			$s.activeCards[track] = _.reject($s.activeCards[track], card);
+			dealCard(track);
+		}
+
 		function shuffleTiles() {
 			var tiles = [];
 			_.each(CF.allTiles, function eachTile(tile) {
@@ -98,6 +108,109 @@ mainApp.controller('MainCtrl', [
 
 		function dealTile() {
 			$s.activeTiles.push($s.allTiles.splice(0, 1)[0]);
+		}
+
+		function dealChips(count) {
+			_.each($s.allGems, function eachGem(gem) {
+				if (gem.name !== 'gold') {
+					$s.allChips.push(new Chip(gem.name, count));
+				}
+			});
+		}
+
+		function dealGoldChips() {
+			for (var i = 1; i <= 5; i++) {
+				$s.allChips.push(new Chip('gold', i));
+			}
+		}
+
+		function payForCard(card) {
+			var tempChips = _.clone($s.currentPlayer.chips);
+			var success = true;
+			var cardPay, chipPay, goldPay, diff, chip;
+
+			_.each(card.cost, function eachCost(value, gem) {
+				if (success) {
+					cardPay = _.where($s.currentPlayer.cards, {name: gem}).length;
+					chipPay = _.where(tempChips, {name: gem}).length;
+					goldPay = _.where(tempChips, {name: 'gold'}).length;
+					diff = value - cardPay;
+
+					if (diff > (chipPay + goldPay)) {
+						success = false;
+					} else {
+						for (diff; diff > 0 && chipPay > 0; diff--) {
+							chip = _.find(tempChips, {name: gem});
+							tempChips = _.reject(tempChips, {id: chip.id});
+						}
+
+						for (diff; diff > 0; diff--) {
+							chip = _.find(tempChips, {name: 'gold'});
+							tempChips = _.reject(tempChips, {id: chip.id});
+						}
+					}
+				}
+			});
+
+			if (success) {
+				$s.currentPlayer.chips = tempChips;
+			}
+
+			return success;
+		}
+
+		function tileAvailable(tile) {
+			var success = true;
+			var cards;
+
+			_.each(tile.cost, function eachCost(value, gem) {
+				if (success) {
+					cards = _.where($s.currentPlayer.cards, {name: gem}).length;
+					success = cards >= value;
+				}
+			});
+
+			return success;
+		}
+
+		function reserveCard(card) {
+			var track = 'track' + card.track;
+			var chip = _.find($s.allChips, {name: gem});
+
+			if ($s.currentPlayer.reserve.length > 2) {
+				alert('You can\'t reserve more than 3 cards');
+
+				return false;
+			}
+			$s.currentPlayer.reserve.push(card);
+			replaceCard(card);
+			delete $s.currentPlayer.reservation;
+
+			if (chip) {
+				$s.allChips = _.reject($s.allChips, {id: chip.id});
+				$s.currentPlayer.chips.push(chip);
+			}
+
+			return true;
+		}
+
+		function confirmReserve(card) {
+			var message = card ? 'Would you like to reserve this card?' : 'Please choose a card to reserve';
+			var answer = $s.currentPlayer.reservation || confirm(message);
+
+			if (answer) {
+				if (card) {
+					return reserveCard(card);
+				} else {
+					$s.currentPlayer.reservation = true;
+				}
+			}
+
+			if (!answer && !card) {
+				$s.clearSelection();
+			}
+
+			return answer;
 		}
 
 		var timeFormat = 'YYYY-MM-DD HH:mm:ss';
@@ -165,6 +278,8 @@ mainApp.controller('MainCtrl', [
 		};
 
 		$s.startGame = function startGame() {
+			var chipCount = $s.allPlayers.length === 4 ? 7 : $s.allPlayers.length + 2;
+
 			for (var i = 1; i <= 3; i++) {
 				for (var j = 1; j <= 4; j++) {
 					dealCard('track' + i);
@@ -174,6 +289,11 @@ mainApp.controller('MainCtrl', [
 			for (var k = 0; k <= $s.allPlayers.length; k++) {
 				dealTile();
 			}
+
+			for (var l = 1; l <= chipCount; l++) {
+				dealChips(l);
+			}
+			dealGoldChips();
 			$s.gameStatus = 'game-started';
 		};
 
@@ -188,21 +308,35 @@ mainApp.controller('MainCtrl', [
 		};
 
 		$s.collectCard = function collectCard(card) {
-			var track = 'track' + card.track;
-			$s.currentPlayer.cards.push(card);
-			$s.activeCards[track] = _.reject($s.activeCards[track], card);
-			dealCard(track);
+			var reserve = $s.currentPlayer.reservation;
+
+			if (reserve || !$s.currentPlayer.auto) {
+				reserve = confirmReserve(card);
+			}
+
+			if (!reserve && payForCard(card)) {
+				$s.currentPlayer.cards.push(card);
+				replaceCard(card);
+			} else if (!reserve && !confirmReserve(card)) {
+				return false;
+			}
+			$s.currentSelection = [];
 			$s.changeCurrentPlayer();
 		};
 
 		$s.collectTile = function collectTile(tile) {
-			$s.currentPlayer.tiles.push(tile);
-			$s.activeTiles = _.reject($s.activeTiles, tile);
+			if (tileAvailable(tile)) {
+				$s.currentPlayer.tiles.push(tile);
+				$s.activeTiles = _.reject($s.activeTiles, tile);
+			}
 		};
 
 		$s.collectChips = function collectChips() {
+			var chip;
 			_.each($s.currentSelection, function eachChip(gem) {
-				$s.currentPlayer.chips.push(new Chip(gem));
+				chip = _.find($s.allChips, {name: gem});
+				$s.allChips = _.reject($s.allChips, {id: chip.id});
+				$s.currentPlayer.chips.push(chip);
 			});
 			$s.changeCurrentPlayer();
 			$s.currentSelection = [];
@@ -210,19 +344,33 @@ mainApp.controller('MainCtrl', [
 
 		$s.clearSelection = function clearSelection() {
 			$s.currentSelection = [];
+			delete $s.currentPlayer.reservation;
 		};
 
 		$s.addChip = function addChip(gem) {
-			$s.currentSelection.push(_.clone(gem));
+			if (gem === 'gold') {
+				if ($s.currentPlayer.reserve.length < 3) {
+					confirmReserve();
+				} else {
+					alert('You already have 3 cards, you may not reserve another');
+				}
+			} else {
+				$s.currentSelection.push(_.clone(gem));
+			}
 		};
 
 		$s.gemAvailable = function notAvailable(gem) {
+			var count = _.where($s.allChips, {name: gem}).length;
+
 			switch (true) {
-				case ($s.currentSelection.indexOf('gold') !== -1):
-					// you have a gold
+				case ($s.currentSelection.indexOf('gold') !== -1 && $s.currentPlayer.reserve.length < 3):
+					// you have a gold or 3 reserved cards
 					return false;
 				case ($s.currentSelection.length && $s.currentSelection[0] === $s.currentSelection[1]):
 					// you have two of the same gem
+					return false;
+				case ($s.currentSelection.length && $s.currentSelection[0].name === gem && count < 3):
+					// there aren't enough gems for you to take two of the same
 					return false;
 				case ($s.currentSelection.length === 3):
 					// you have three gems
@@ -235,7 +383,11 @@ mainApp.controller('MainCtrl', [
 					return false;
 			}
 
-			return true;
+			return count > 0;
+		};
+
+		$s.howMany = function howMany(gem) {
+			return _.where($s.allChips, {name: gem}).length;
 		};
 
 		// $s.activeGames = FF.getFBArray('activeGames');

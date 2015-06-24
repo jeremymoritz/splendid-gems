@@ -63,13 +63,13 @@ html(ng-app='mainApp')
 									p {{value}}
 
 				+col(null, 3, 4, 3)
-					button(ng-repeat='gem in allGems' class='gem btn btn-{{gem.btnClass}}' ng-click='addChip(gem.name)' ng-disabled='!gemAvailable(gem.name)') {{gem.display}}
+					button(ng-repeat='gem in allGems' class='gem btn btn-{{gem.btnClass}}' ng-click='addChip(gem.name)' ng-disabled='!gemAvailable(gem.name)') {{gem.display}} #[span ({{howMany(gem.name)}})]
 					h4 Current Selection
 					ul
 						li(ng-repeat='gem in currentSelection track by $index')
 							h5 Gem: #[span.capitalize {{gem}}]
-					button.btn.btn-success(ng-click='collectChips()') Collect Gems
-					button.btn.btn-info(ng-click='clearSelection()') Clear Selection
+					button.btn.btn-success(ng-click='collectChips()' ng-disabled='!currentSelection.length') Collect Gems
+					button.btn.btn-info(ng-click='clearSelection()' ng-disabled='!currentSelection.length') Clear Selection
 		script(src='inc/lib.js')
 		script(src='inc/main.js')
 //		| @@javascriptReplaceFiles

@@ -818,38 +818,26 @@ mainApp.factory('CardFactory', [
 				id: 'T1',
 				cost: {
 					diamond: 4,
-					sapphire: 4,
-					emerald: 0,
-					ruby: 0,
-					onyx: 0
+					sapphire: 4
 				},
 				points: 3
 			}, {
 				id: 'T2',
 				cost: {
-					diamond: 0,
 					sapphire: 4,
-					emerald: 4,
-					ruby: 0,
-					onyx: 0
+					emerald: 4
 				},
 				points: 3
 			}, {
 				id: 'T3',
 				cost: {
-					diamond: 0,
-					sapphire: 0,
 					emerald: 4,
-					ruby: 4,
-					onyx: 0
+					ruby: 4
 				},
 				points: 3
 			}, {
 				id: 'T4',
 				cost: {
-					diamond: 0,
-					sapphire: 0,
-					emerald: 0,
 					ruby: 4,
 					onyx: 4
 				},
@@ -858,9 +846,6 @@ mainApp.factory('CardFactory', [
 				id: 'T5',
 				cost: {
 					diamond: 4,
-					sapphire: 0,
-					emerald: 0,
-					ruby: 0,
 					onyx: 4
 				},
 				points: 3
@@ -869,26 +854,20 @@ mainApp.factory('CardFactory', [
 				cost: {
 					diamond: 3,
 					sapphire: 3,
-					emerald: 3,
-					ruby: 0,
-					onyx: 0
+					emerald: 3
 				},
 				points: 3
 			}, {
 				id: 'T7',
 				cost: {
-					diamond: 0,
 					sapphire: 3,
 					emerald: 3,
-					ruby: 3,
-					onyx: 0
+					ruby: 3
 				},
 				points: 3
 			}, {
 				id: 'T8',
 				cost: {
-					diamond: 0,
-					sapphire: 0,
 					emerald: 3,
 					ruby: 3,
 					onyx: 3
@@ -898,8 +877,6 @@ mainApp.factory('CardFactory', [
 				id: 'T9',
 				cost: {
 					diamond: 3,
-					sapphire: 0,
-					emerald: 0,
 					ruby: 3,
 					onyx: 3
 				},
@@ -909,8 +886,6 @@ mainApp.factory('CardFactory', [
 				cost: {
 					diamond: 3,
 					sapphire: 3,
-					emerald: 0,
-					ruby: 0,
 					onyx: 3
 				},
 				points: 3
