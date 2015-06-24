@@ -38,15 +38,17 @@ html(ng-app='mainApp')
 					ul
 						li(ng-repeat='player in allPlayers')
 							h5(ng-click='changeCurrentPlayer(player)') {{player.name}} chips:({{player.chips.length}}) points:({{calculatePoints(player)}})
+							div(ng-if='player.tiles.length')
+								h6(ng-repeat="(key, value) in player.tiles") Tile: #[span.capitalize {{key}}] {{value.length > 1 ? "(" + value.length + ")" : ""}}
 							div(ng-if='player.cards.length')
-								h6(ng-repeat="(key, value) in player.cards | groupBy: 'gem'") Card: {{key}} {{value.length > 1 ? "(" + value.length + ")" : ""}}
+								h6(ng-repeat="(key, value) in player.cards | groupBy: 'gem'") Card: #[span.capitalize {{key}}] {{value.length > 1 ? "(" + value.length + ")" : ""}}
 							div(ng-if='player.chips.length')
-								h6(ng-repeat="(key, value) in player.chips | groupBy: 'gem'") Gem: {{key}} {{value.length > 1 ? "(" + value.length + ")" : ""}}
+								h6(ng-repeat="(key, value) in player.chips | groupBy: 'gem'") Gem: #[span.capitalize {{key}}] {{value.length > 1 ? "(" + value.length + ")" : ""}}
 				+col(null, 6, 4, 6)
 					ul.track(ng-repeat='track in activeCards')
 						li.card(ng-repeat='card in track' ng-class='card.gem' ng-click='collectCard(card)')
 							h5.hidden Id: {{card.id}}
-							h4 Gem: {{card.gem}}
+							h4.capitalize {{card.gem}}
 							h5 Points: {{card.points}}
 							h5 Cost:
 							ul.cost
@@ -65,7 +67,7 @@ html(ng-app='mainApp')
 					h4 Current Selection
 					ul
 						li(ng-repeat='gem in currentSelection track by $index')
-							h5 Gem: {{gem}}
+							h5 Gem: #[span.capitalize {{gem}}]
 					button.btn.btn-success(ng-click='collectChips()') Collect Gems
 					button.btn.btn-info(ng-click='clearSelection()') Clear Selection
 		script(src='inc/lib.js')

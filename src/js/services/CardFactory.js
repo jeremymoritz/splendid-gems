@@ -6,7 +6,7 @@ mainApp.factory('CardFactory', [
 			allCards: [{
 				id: 'B11',
 				track: 1,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					red: 4
 				},
@@ -14,7 +14,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B12',
 				track: 1,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					blue: 1,
 					green: 3,
@@ -23,14 +23,14 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B13',
 				track: 1,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					brown: 3
 				}
 			}, {
 				id: 'B14',
 				track: 1,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					white: 1,
 					green: 2,
@@ -39,7 +39,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B15',
 				track: 1,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					green: 2,
 					brown: 2
@@ -47,7 +47,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B16',
 				track: 1,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					white: 1,
 					green: 1,
@@ -57,7 +57,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B17',
 				track: 1,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					white: 1,
 					brown: 2
@@ -65,7 +65,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B18',
 				track: 1,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					white: 1,
 					green: 1,
@@ -75,7 +75,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O11',
 				track: 1,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					blue: 4
 				},
@@ -83,7 +83,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O12',
 				track: 1,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					green: 1,
 					red: 3,
@@ -92,14 +92,14 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O13',
 				track: 1,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					green: 3
 				}
 			}, {
 				id: 'O14',
 				track: 1,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					white: 2,
 					blue: 2,
@@ -108,7 +108,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O15',
 				track: 1,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					white: 2,
 					green: 2
@@ -116,7 +116,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O16',
 				track: 1,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					white: 1,
 					blue: 2,
@@ -126,7 +126,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O17',
 				track: 1,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					green: 2,
 					red: 1
@@ -134,7 +134,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O18',
 				track: 1,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					white: 1,
 					blue: 1,
@@ -144,7 +144,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G11',
 				track: 1,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					brown: 4
 				},
@@ -152,7 +152,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G12',
 				track: 1,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					white: 1,
 					blue: 3,
@@ -161,14 +161,14 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G13',
 				track: 1,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					red: 3
 				}
 			}, {
 				id: 'G14',
 				track: 1,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					blue: 1,
 					red: 2,
@@ -177,7 +177,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G15',
 				track: 1,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					blue: 2,
 					red: 2
@@ -185,7 +185,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G16',
 				track: 1,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					white: 1,
 					blue: 1,
@@ -195,7 +195,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G17',
 				track: 1,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					white: 2,
 					blue: 1
@@ -203,7 +203,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G18',
 				track: 1,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					white: 1,
 					blue: 1,
@@ -213,7 +213,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R11',
 				track: 1,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					white: 4
 				},
@@ -221,7 +221,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R12',
 				track: 1,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					white: 1,
 					red: 1,
@@ -230,14 +230,14 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R13',
 				track: 1,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					white: 3
 				}
 			}, {
 				id: 'R14',
 				track: 1,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					white: 2,
 					green: 1,
@@ -246,7 +246,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R15',
 				track: 1,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					white: 2,
 					red: 2
@@ -254,7 +254,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R16',
 				track: 1,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					white: 2,
 					blue: 1,
@@ -264,7 +264,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R17',
 				track: 1,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					blue: 2,
 					green: 1
@@ -272,7 +272,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R18',
 				track: 1,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					white: 1,
 					blue: 1,
@@ -282,7 +282,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W11',
 				track: 1,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					green: 4
 				},
@@ -290,7 +290,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W12',
 				track: 1,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					white: 3,
 					blue: 1,
@@ -299,14 +299,14 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W13',
 				track: 1,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					blue: 3
 				}
 			}, {
 				id: 'W14',
 				track: 1,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					blue: 2,
 					green: 2,
@@ -315,7 +315,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W15',
 				track: 1,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					blue: 2,
 					brown: 2
@@ -323,7 +323,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W16',
 				track: 1,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					blue: 1,
 					green: 2,
@@ -333,7 +333,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W17',
 				track: 1,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					red: 2,
 					brown: 1
@@ -341,7 +341,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W18',
 				track: 1,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					blue: 1,
 					green: 1,
@@ -351,7 +351,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B21',
 				track: 2,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					blue: 6
 				},
@@ -359,7 +359,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B22',
 				track: 2,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					white: 5,
 					blue: 3
@@ -368,7 +368,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B23',
 				track: 2,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					blue: 5
 				},
@@ -376,7 +376,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B24',
 				track: 2,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					white: 2,
 					red: 1,
@@ -386,7 +386,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B25',
 				track: 2,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					blue: 2,
 					green: 3,
@@ -396,7 +396,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B26',
 				track: 2,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					blue: 2,
 					green: 2,
@@ -406,7 +406,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O21',
 				track: 2,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					brown: 6
 				},
@@ -414,7 +414,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O22',
 				track: 2,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					green: 5,
 					red: 3
@@ -423,7 +423,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O23',
 				track: 2,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					white: 5
 				},
@@ -431,7 +431,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O24',
 				track: 2,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					blue: 1,
 					green: 4,
@@ -441,7 +441,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O25',
 				track: 2,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					white: 3,
 					green: 3,
@@ -451,7 +451,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O26',
 				track: 2,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					white: 3,
 					blue: 2,
@@ -461,7 +461,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G21',
 				track: 2,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					green: 6
 				},
@@ -469,7 +469,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G22',
 				track: 2,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					blue: 5,
 					green: 3
@@ -478,7 +478,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G23',
 				track: 2,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					green: 5
 				},
@@ -486,7 +486,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G24',
 				track: 2,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					white: 4,
 					blue: 2,
@@ -496,7 +496,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G25',
 				track: 2,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					white: 3,
 					green: 2,
@@ -506,7 +506,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G26',
 				track: 2,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					white: 2,
 					blue: 3,
@@ -516,7 +516,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R21',
 				track: 2,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					red: 6
 				},
@@ -524,7 +524,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R22',
 				track: 2,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					white: 3,
 					brown: 5
@@ -533,7 +533,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R23',
 				track: 2,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					brown: 5
 				},
@@ -541,7 +541,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R24',
 				track: 2,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					white: 1,
 					blue: 4,
@@ -551,7 +551,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R25',
 				track: 2,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					blue: 3,
 					red: 2,
@@ -561,7 +561,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R26',
 				track: 2,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					white: 2,
 					red: 2,
@@ -571,7 +571,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W21',
 				track: 2,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					white: 6
 				},
@@ -579,7 +579,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W22',
 				track: 2,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					red: 5,
 					brown: 3
@@ -588,7 +588,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W23',
 				track: 2,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					red: 5
 				},
@@ -596,7 +596,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W24',
 				track: 2,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					green: 1,
 					red: 4,
@@ -606,7 +606,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W25',
 				track: 2,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					white: 2,
 					blue: 3,
@@ -616,7 +616,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W26',
 				track: 2,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					green: 3,
 					red: 2,
@@ -626,7 +626,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B31',
 				track: 3,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					white: 7,
 					blue: 3
@@ -635,7 +635,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B32',
 				track: 3,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					white: 7
 				},
@@ -643,7 +643,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B33',
 				track: 3,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					white: 6,
 					blue: 3,
@@ -653,7 +653,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'B34',
 				track: 3,
-				gem: 'Blue',
+				gem: 'sapphire',
 				cost: {
 					white: 3,
 					green: 3,
@@ -664,7 +664,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O31',
 				track: 3,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					red: 7,
 					brown: 3
@@ -673,7 +673,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O32',
 				track: 3,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					red: 7
 				},
@@ -681,7 +681,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O33',
 				track: 3,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					green: 3,
 					red: 6,
@@ -691,7 +691,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'O34',
 				track: 3,
-				gem: 'Brown',
+				gem: 'topaz',
 				cost: {
 					white: 3,
 					blue: 3,
@@ -702,7 +702,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G31',
 				track: 3,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					blue: 7,
 					green: 3
@@ -711,7 +711,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G32',
 				track: 3,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					blue: 7
 				},
@@ -719,7 +719,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G33',
 				track: 3,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					white: 3,
 					blue: 6,
@@ -729,7 +729,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'G34',
 				track: 3,
-				gem: 'Green',
+				gem: 'emerald',
 				cost: {
 					white: 5,
 					blue: 3,
@@ -740,7 +740,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R31',
 				track: 3,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					green: 7,
 					red: 3
@@ -749,7 +749,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R32',
 				track: 3,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					green: 7
 				},
@@ -757,7 +757,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R33',
 				track: 3,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					blue: 3,
 					green: 6,
@@ -767,7 +767,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'R34',
 				track: 3,
-				gem: 'Red',
+				gem: 'ruby',
 				cost: {
 					white: 3,
 					blue: 5,
@@ -778,7 +778,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W31',
 				track: 3,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					white: 3,
 					brown: 7
@@ -787,7 +787,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W32',
 				track: 3,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					brown: 7
 				},
@@ -795,7 +795,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W33',
 				track: 3,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					white: 3,
 					green: 3,
@@ -805,7 +805,7 @@ mainApp.factory('CardFactory', [
 			}, {
 				id: 'W34',
 				track: 3,
-				gem: 'White',
+				gem: 'diamond',
 				cost: {
 					blue: 3,
 					green: 3,

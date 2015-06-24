@@ -197,7 +197,7 @@ mainApp.controller('MainCtrl', [
 
 		$s.collectTile = function collectTile(tile) {
 			$s.currentPlayer.tiles.push(tile);
-			$s.activeTiles = _.reject($s.activeTiles, Tile);
+			$s.activeTiles = _.reject($s.activeTiles, tile);
 		};
 
 		$s.collectChips = function collectChips() {
