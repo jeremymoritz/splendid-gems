@@ -232,6 +232,9 @@ mainApp.controller('MainCtrl', [
 			onyx: 0
 		};
 
+		// cursorObj = FF.getFBObject('cursor');
+		// cursorObj.$bindTo($s, 'cursor');
+
 		//	initialize scoped variables
 		_.assign($s, {
 			time: moment().format(timeFormat),
@@ -409,8 +412,6 @@ mainApp.controller('MainCtrl', [
 		$s.howMany = function howMany(gem) {
 			return _.where($s.allChips, {name: gem}).length;
 		};
-
-		//$s.cursor = FF.getFBObject('cursor');
 
 		$s.moveCursor = function moveCursor(e) {
 			$s.cursor.left = (e.pageX + 2) + 'px';
