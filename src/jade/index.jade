@@ -14,7 +14,8 @@ html(ng-app='mainApp')
 		link(rel='stylesheet', href='inc/main.css')
 		script(src='inc/angular.js')
 	body(ng-cloak, ng-controller='MainCtrl')
-		.container(ng-class='gameStatus')
+		.container(ng-class='gameStatus' ng-mousemove='moveCursor($event)')
+			img#cursor.img.img-responsive(src='img/hand.png' ng-style='cursor')
 			header.hide
 				h1 Splendid Gems
 			.jumbotron

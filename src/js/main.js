@@ -12,12 +12,15 @@ mainApp.controller('MainCtrl', [
 		function init() {
 			//	init stuff
 			window.$s = $s;
+
+			/**
 			// remove scrolling also removes click and drag
 			window.addEventListener('touchmove', function disallowScrolling(event) {
 				if ($(document).width() >= 768) {
 					event.preventDefault();
 				}
 			}, false);
+			*/
 		}
 
 		function Chip(gem, count) {
@@ -405,6 +408,13 @@ mainApp.controller('MainCtrl', [
 
 		$s.howMany = function howMany(gem) {
 			return _.where($s.allChips, {name: gem}).length;
+		};
+
+		//$s.cursor = FF.getFBObject('cursor');
+
+		$s.moveCursor = function moveCursor(e) {
+			$s.cursor.left = (e.pageX + 2) + 'px';
+			$s.cursor.top = (e.pageY + 2) + 'px';
 		};
 
 		// $s.activeGames = FF.getFBArray('activeGames');
