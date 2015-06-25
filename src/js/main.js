@@ -127,6 +127,7 @@ mainApp.controller('MainCtrl', [
 		function payForCard(card) {
 			var tempChips = _.clone($s.currentPlayer.chips);
 			var success = true;
+			var payment = [];
 			var cardPay, chipPay, goldPay, diff, chip;
 
 			_.each(card.cost, function eachCost(value, gem) {
@@ -142,11 +143,14 @@ mainApp.controller('MainCtrl', [
 						for (diff; diff > 0 && chipPay > 0; diff--) {
 							chip = _.find(tempChips, {name: gem});
 							tempChips = _.reject(tempChips, {id: chip.id});
+							payment.push(chip);
+							chipPay--;
 						}
 
 						for (diff; diff > 0; diff--) {
 							chip = _.find(tempChips, {name: 'gold'});
 							tempChips = _.reject(tempChips, {id: chip.id});
+							payment.push(chip);
 						}
 					}
 				}
@@ -154,6 +158,9 @@ mainApp.controller('MainCtrl', [
 
 			if (success) {
 				$s.currentPlayer.chips = tempChips;
+				_.each(payment, function eachChip(chip) {
+					$s.allChips.push(chip);
+				});
 			}
 
 			return success;
@@ -175,7 +182,7 @@ mainApp.controller('MainCtrl', [
 
 		function reserveCard(card) {
 			var track = 'track' + card.track;
-			var chip = _.find($s.allChips, {name: gem});
+			var chip = _.find($s.allChips, {name: 'gold'});
 
 			if ($s.currentPlayer.reserve.length > 2) {
 				alert('You can\'t reserve more than 3 cards');
@@ -243,6 +250,10 @@ mainApp.controller('MainCtrl', [
 			}
 		});
 
+		$s.toggleReserve = function toggleReserve(player) {
+			player.showReserve = !player.showReserve;
+		};
+
 		$s.calculatePoints = function calculatePoints(player) {
 			var total = _.reduce(player.cards, function sumCards(total, card) {
 				return total + card.points;
@@ -307,6 +318,12 @@ mainApp.controller('MainCtrl', [
 			$s.startGame();
 		};
 
+		$s.collectReserveCard = function collectReserveCard(player, card) {
+			if ($s.currentPlayer.name == player.name) {
+				$s.collectCard(card);
+			}
+		};
+
 		$s.collectCard = function collectCard(card) {
 			var reserve = $s.currentPlayer.reservation;
 
@@ -369,7 +386,7 @@ mainApp.controller('MainCtrl', [
 				case ($s.currentSelection.length && $s.currentSelection[0] === $s.currentSelection[1]):
 					// you have two of the same gem
 					return false;
-				case ($s.currentSelection.length && $s.currentSelection[0].name === gem && count < 3):
+				case ($s.currentSelection.length && $s.currentSelection[0].name === gem && count < 4):
 					// there aren't enough gems for you to take two of the same
 					return false;
 				case ($s.currentSelection.length === 3):

@@ -44,6 +44,17 @@ html(ng-app='mainApp')
 								h6(ng-repeat="(key, value) in player.cards | groupBy: 'gem'") Card: #[span.capitalize {{key}}] {{value.length > 1 ? "(" + value.length + ")" : ""}}
 							div(ng-if='player.chips.length')
 								h6(ng-repeat="(key, value) in player.chips | groupBy: 'gem'") Gem: #[span.capitalize {{key}}] {{value.length > 1 ? "(" + value.length + ")" : ""}}
+							div(ng-if='player.reserve.length')
+								button.btn.btn-info(ng-click='toggleReserve(player)') {{player.showReserve ? 'Hide' : 'Show'}} Reserve
+								ul.track.player(ng-show='player.showReserve')
+									li.card(ng-repeat='card in player.reserve' ng-class='card.gem' ng-click='collectReserveCard(player, card)')
+										h5.hidden Id: {{card.id}}
+										h4.capitalize {{card.gem}}
+										h5 Points: {{card.points}}
+										h5 Cost:
+										ul.cost
+											li(ng-repeat='(gem, value) in card.cost' ng-class='gem' ng-show='value > 0')
+												p {{value}}
 				+col(null, 6, 4, 6)
 					ul.track(ng-repeat='track in activeCards')
 						li.card(ng-repeat='card in track' ng-class='card.gem' ng-click='collectCard(card)')
