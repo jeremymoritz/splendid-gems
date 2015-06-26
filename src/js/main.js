@@ -231,9 +231,9 @@ mainApp.controller('MainCtrl', [
 			ruby: 0,
 			onyx: 0
 		};
-
-		// cursorObj = FF.getFBObject('cursor');
-		// cursorObj.$bindTo($s, 'cursor');
+		// add later for everyone seeing same cursor movement
+		var cursorObj = FF.getFBObject('cursor');
+		cursorObj.$bindTo($s, 'cursor');
 
 		//	initialize scoped variables
 		_.assign($s, {
@@ -253,6 +253,10 @@ mainApp.controller('MainCtrl', [
 				track1: [],
 				track2: [],
 				track3: []
+			},
+			cursor: {
+				left: 0,
+				top: 0
 			}
 		});
 

@@ -1,14 +1,16 @@
 #cursor {
+	transition: all ease 0.33s;
 	position: absolute;
 	z-index: 1000;
+}
+.active-player #cursor {
+	// ONLY FOR ACTIVE PLAYER
+	display: none;
 }
 .container,
 .btn,
 input {
-	cursor: none !important;
-}
-.btn[disabled] {
-	cursor: not-allowed !important;
+	cursor: url(../img/hand.png), auto !important;
 }
 .container {
 	&.game-started {
