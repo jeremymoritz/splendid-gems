@@ -5,3 +5,5 @@ Some have suggested that this game is similar to the card game "Splendor" by Spa
 1. Run npm install
 2. Run grunt
 3. Open dist/index.html
+
+Website: www.splendidgems.net
